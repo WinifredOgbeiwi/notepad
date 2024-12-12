@@ -55,6 +55,7 @@
             this.restoreDefaultZoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textAreaBox = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1252, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1252, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,13 +115,13 @@
             this.printToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(57, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(57, 32);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(60, 29);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(60, 32);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // formatToolStripMenuItem
@@ -129,7 +130,7 @@
             this.wordWrapToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
-            this.formatToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(87, 32);
             this.formatToolStripMenuItem.Text = "Format";
             // 
             // viewToolStripMenuItem
@@ -138,7 +139,7 @@
             this.zoomToolStripMenuItem,
             this.statusBarToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(69, 32);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // wordWrapToolStripMenuItem
@@ -170,6 +171,7 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
@@ -221,7 +223,7 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(67, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(67, 32);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // zoonmInToolStripMenuItem
@@ -253,12 +255,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // textAreaBox
+            // 
+            this.textAreaBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textAreaBox.Location = new System.Drawing.Point(0, 36);
+            this.textAreaBox.Multiline = true;
+            this.textAreaBox.Name = "textAreaBox";
+            this.textAreaBox.Size = new System.Drawing.Size(1252, 563);
+            this.textAreaBox.TabIndex = 2;
+            // 
             // NotepadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1252, 635);
+            this.Controls.Add(this.textAreaBox);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -302,5 +314,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel zoomStatusLabel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textAreaBox;
     }
 }
